@@ -1,3 +1,6 @@
+from math import sqrt
+
+
 def calcula_pi():
     return 3.141596
 
@@ -5,12 +8,17 @@ pi = calcula_pi()
 
 
 def eq_seg_grado(a, b, c):
-    tmp = sqrt(b ** 2 - 4 * a * c)
+    try:
+        tmp = sqrt(b ** 2 - 4 * a * c)
 
-    x1 = (-b + tmp) / 2 * a
-    x2 = (-b - tmp) / 2 * a
+        x1 = (-b + tmp) / (2 * a)
+        x2 = (-b - tmp) / (2 * a)
 
-    return x1, x2
+        return x1, x2
+    except ValueError as e:
+        raise ValueError('Esa ecuación de segundo orden no tiene soluciones.')
+    except ZeroDivisionError as e:
+        raise ValueError('El valor de a no puede ser cero.')
 
 
 def area_rect(width, height):
