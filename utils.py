@@ -1,4 +1,5 @@
 from math import sqrt
+from random import randint
 
 
 def calcula_pi():
@@ -71,3 +72,74 @@ def max_lista(lista):
 
     return max, pos_max
 
+
+def introduce_lista_nums(msg, div=',', type='FLOAT'):
+    lista = []
+    cad = input(msg)
+    if cad == '':
+        return []
+    numbers = cad.split(div)
+    for num in numbers:
+        if type == 'FLOAT':
+            lista.append(float(num))
+        elif type == 'INT':
+            lista.append((int(num)))
+        else:
+            raise ValueError('El parámetro type solo acepta INT o FLOAT')
+    return lista
+
+
+def imprime_matriz(M):
+    max_size = calcula_tam_maximo_num(M)
+    for i in range(len(M)):
+        for j in range(len(M[i])):
+            print(('{0:' + str(max_size) + 'd}').format(M[i][j]), end=' ')
+        print()
+
+
+def calcula_tam_maximo_num(M):
+    max = 0
+    for row in M:
+        for elem in row:
+            s = str(elem)
+            if len(s) > max:
+                max = len(s)
+    return max
+
+
+def matriz_unitaria(n):
+    return matriz_diagonal(n)
+
+
+def matriz_diagonal(n, valor=1):
+    M  = []
+    for i in range(n):
+        row = [0] * n
+        row[i] = valor
+        M.append(row)
+    return M
+
+
+def introduce_matriz():
+    M = []
+
+    row = None
+    i = 1
+    while row != []:
+        row = introduce_lista_nums('Introduce la fila {0}: '.format(i), type='INT')
+        if row != []:
+            M.append(row)
+            i += 1
+
+    return M
+
+
+def int_matriz_random(n, m, min, max):
+    M = []
+    for i in range(n):
+        row = []
+        for j in range(m):
+            row.append(randint(min, max))
+        M.append(row)
+
+    return M
