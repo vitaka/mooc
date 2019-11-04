@@ -20,7 +20,7 @@ def mult_matrices(A, B):
     C = []
     for i in range(len(A)):
         row = []
-        for j in range(len(A[i])):
+        for j in range(len(B[0])):
             sum = 0
             for k in range(len(A[i])):
                 sum += A[i][k] * B[k][j]
@@ -28,13 +28,14 @@ def mult_matrices(A, B):
         C.append(row)
     return C
 
-A = int_matriz_random(3, 3, 0, 10)
-B = int_matriz_random(3, 3, 0, 10)
+# imprime_matriz(int_matriz_random(6, 7, 1, 10))
+A = int_matriz_random(4, 4, 0, 10)
+B = int_matriz_random(4, 4, 0, 10)
 imprime_matriz(A)
 print()
 imprime_matriz(B)
 print()
-imprime_matriz(suma_matrices(A, B))
+#imprime_matriz(suma_matrices(A, B))
 print("Multiplicación AxB")
 C = mult_matrices(A, B)
 imprime_matriz(C)
