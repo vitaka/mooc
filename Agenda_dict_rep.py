@@ -28,12 +28,10 @@ def introduce_contacto():
 def anyadir_contacto(agenda):
     contacto = introduce_contacto()
     nombre, tel, dir, email = contacto
-    if nombre not in agenda:
-        agenda[nombre] = [contacto]
-    else:
-        contactos = agenda[nombre]
-        contactos.append(contacto)
-
+    agenda[nombre] = contacto
+    agenda[tel] = contacto
+    agenda[email] = contacto
+    contactos.append(contacto)
 
 
 def buscar(agenda, nombre_a_buscar):
@@ -73,16 +71,10 @@ def buscar_contacto(agenda):
     nombre = input('Buscar: ')
 
     try:
-        contactos = agenda[nombre]
-        imprime_contactos(contactos)
+        contacto = agenda[nombre]
+        imprime_contacto(contacto)
     except KeyError as e:
         msg('Ese contacto no existe.')
-
-
-def imprime_contactos(contactos):
-    for contacto in contactos:
-        imprime_contacto(contacto)
-        print()
 
 
 def imprime_contacto(contacto):
@@ -93,9 +85,9 @@ def imprime_contacto(contacto):
     print('email:', email)
 
 
-def listar_contactos(agenda):
-    for key in agenda:
-        imprime_contactos(agenda[key])
+def listar_contactos(contactos):
+    for contacto in contactos:
+        imprime_contacto(contacto)
         print()
 
 
@@ -106,6 +98,7 @@ BUSCAR = 4
 LISTAR = 5
 SALIR = 6
 agenda = {}
+contactos = []
 op = None
 while op != SALIR:
     op = menu()
@@ -118,7 +111,7 @@ while op != SALIR:
     elif op == BUSCAR:
         buscar_contacto(agenda)
     elif op == LISTAR:
-        listar_contactos(agenda)
+        listar_contactos(contactos)
     elif op != SALIR:
         msg('Opción incorrecta, vuelva a intentarlo.')
 
