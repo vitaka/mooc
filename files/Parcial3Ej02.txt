@@ -1,0 +1,64 @@
+Nombre:Daenerys
+Apellidos:Targaryen
+Fecha de nacimiento:4 ene 1983
+Fecha de inscripción:18 ago 2017
+
+Nombre:Jon
+Apellidos:Nieve
+Fecha de nacimiento:4 ago 1985
+Fecha de inscripción:20 sep 2018
+
+Nombre:Gregor
+Apellidos:Clegane
+Fecha de nacimiento:2 feb 1963
+Fecha de inscripción: 24 abr 2006
+
+Nombre:Cersei
+Apellidos:Lannister
+Fecha de nacimiento:18 mar 1978
+Fecha de inscripción:13 abr 2008
+
+Nombre:Tyrion
+Apellidos:Lannister
+Fecha de nacimiento:24 oct 1986
+Fecha de inscripción:24 oct 2009
+
+Nombre:Sansa
+Apellidos:Stark
+Fecha de nacimiento:3 sep 2000
+Fecha de inscripción:18 abr 2018
+
+Nombre:Arya
+Apellidos:Stark
+Fecha de nacimiento:22 dic 2002
+Fecha de inscripción:18 oct 2017
+
+Nombre:Khal
+Apellidos:Drogo
+Fecha de nacimiento:15 jul 1989
+Fecha de inscripción:22 jun 2016
+
+Nombre:Joffrey
+Apellidos:Baratheon
+Fecha de nacimiento:13 nov 2002
+Fecha de inscripción:13 ago 2016
+
+Nombre:Petyr
+Apellidos:Baelish
+Fecha de nacimiento:4 jul 1965
+Fecha de inscripción:8 jul 2002
+
+Nombre:Sandor
+Apellidos:Clegane
+Fecha de nacimiento:4 oct 1944
+Fecha de inscripción:3 nov 2015
+
+Nombre:Ramsay
+Apellidos:Bolton
+Fecha de nacimiento:8 mar 1985
+Fecha de inscripción:24 mar 2003
+
+Nombre:Margaery
+Apellidos:Tyrell
+Fecha de nacimiento:9 feb 2001
+Fecha de inscripción:14 nov 2018
