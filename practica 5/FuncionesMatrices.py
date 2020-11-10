@@ -34,7 +34,7 @@ def multiplicacion_matrices(m1, m2):
         matriz.append([])
         if len(m2) == 0 or len(m1[i]) != len(m2):
             raise ValueError('El número de columnas de la primera matriz debe ser igual al número de filas de la segunda.')
-        for j in range(len(m2[i])):
+        for j in range(len(m2[0])):
             matriz[i].append(0)
             for k in range(len(m2)):
                 if k >= len(m1[i]) or j >= len(m2[k]):
